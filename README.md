@@ -15,16 +15,40 @@ General chat models, like ChatGPT, have attained impressive capability to resolv
 
 ### News
 ---
-- April 15th, we released the initial version of RefGPT-Fact-CN dataset.
-- May 25th, we released the paper and annouced the new RefGPT-Fact dataset and the RefGPT-Code dataset.
+- Oct, Congratulations!🎉🎉🎉 Our paper has been accepted by EMNLP 2023 findings.
+- June 9th, we released the code of generating the data in RefGPT-Fact and provided an efficient implementation of calling the OpenAI API in parallel even with multiple API keys.
 - May 26th, we released the RefGPT-Fact dataset and the RefGPT-Code dataset on the huggingface hub. <a href="https://huggingface.co/Mutonix"><b>[download]</b></a>
-- **Future**: We will release our code recently.
+- May 25th, we released the paper and annouced the new RefGPT-Fact dataset and the RefGPT-Code dataset.
+- April 15th, we released the initial version of RefGPT-Fact-CN dataset.
+
+
+
 
 ## Proposed Method
 <p align="center">
 <img width="800px" alt="RefGPT" src="assets/overview.png">
 </p>
 
+
+## Generate Your Own Dataset with RefGPT
+
+```
+pip install requirements.txt
+
+python parallel_generate-refgpt-fact.py \
+      --reference_filepaths wiki_demo.jsonl \
+      --api_config api_config.jsonl \
+      --save_filepath output.jsonl \
+      --num_chat_to_generate 20000 \
+      --language en \
+      --assistant_word_count 300 \
+      --human_word_count 100 \
+      --num_turn_ratios 0 1 2 2 0 \
+      --max_attempts 5 \
+      --max_requests_per_minute 1000 \
+      --max_tokens_per_minute 40000 
+```
+You can tune the parameters of `max_requests_per_minute` or `max_tokens_per_minute` to adjust the calling speed. You can see a demo of setting API request format in `api_config.jsonl` file.
 
 
 <!-- Our objective is to automatically generate a vast amount of high-quality multi-turn dialogues withour factual errors using powerful LLMs. We employ the following steps. -->

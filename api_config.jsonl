@@ -1,0 +1,2 @@
+{"api-key": "XXXXXXXX", "request_url": "{api-base}/openai/deployments/{engine}/chat/completions?api-version={api-version}"}
+{"api-key": "XXXXXXXX", "request_url": "{api-base}/openai/deployments/{engine}/chat/completions?api-version={api-version}"}
