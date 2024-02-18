@@ -15,6 +15,11 @@ General chat models, like ChatGPT, have attained impressive capability to resolv
 
 ### News
 ---
+- Feb 2024, we updated two new datasets to RefGPT dataset series.
+ 
+  - We supplement RefGPT-Fact with 143k Chinese and 522k English factual multi-turn dialogues using the RefGPT method, denoted as **RefGPT-Fact-v2** <a href="https://huggingface.co/datasets/Mutonix/RefGPT-Fact-v2"><b>[download]</b></a>. 
+  - We also construct a new reasoning dataset with 288k Chinese reasoning QAs, denoted as **RefGPT-Reason** <a href="https://huggingface.co/datasets/Mutonix/RefGPT-Reason"><b>[download]</b></a>.
+ 
 - Oct, Congratulations!🎉🎉🎉 Our paper has been accepted by EMNLP 2023 findings.
 - June 9th, we released the code of generating the data in RefGPT-Fact and provided an efficient implementation of calling the OpenAI API in parallel even with multiple API keys.
 - May 26th, we released the RefGPT-Fact dataset and the RefGPT-Code dataset on the huggingface hub. <a href="https://huggingface.co/Mutonix"><b>[download]</b></a>
