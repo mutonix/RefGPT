@@ -3,3 +3,4 @@ __pycache__
 my*
 cache*
 .DS_Store
+*.ipynb
